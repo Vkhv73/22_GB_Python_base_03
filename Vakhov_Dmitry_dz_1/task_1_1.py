@@ -12,30 +12,33 @@ sec_in_day = sec_in_hour * 24  # 86400 секунд в сутках
 
 
 def convert_time(duration: int) -> str:
-    # пишите реализацию своей программы здесь
-    if duration // sec_in_min == 0:
+    # до минуты
+    if duration < sec_in_min:
         s = duration
         return f'{s} сек'
-    elif 1 <= duration // sec_in_min < sec_in_min:
+    # до часа
+    elif sec_in_min <= duration <= sec_in_hour:
         m = duration // sec_in_min
-        # s = duration - m*sec_in_min
         s = duration % sec_in_min
         return f'{m} мин {s} сек'
-    elif 1 <= duration // sec_in_hour < 24:
+    # до суток
+    elif sec_in_hour <= duration < sec_in_day:
         h = duration // sec_in_hour
         m = (duration % sec_in_hour) // sec_in_min
-        s = duration - h * sec_in_hour - m * sec_in_min
+        s = duration % sec_in_min
         return f'{h} час {m} мин {s} сек'
-    elif 1 <= duration // sec_in_day:
+    # больше суток
+    elif sec_in_day <= duration:
         d = duration // sec_in_day
         h = (duration % sec_in_day) // sec_in_hour
         m = (duration % sec_in_hour) // sec_in_min
-        s = duration - d * sec_in_day - h * sec_in_hour - m * sec_in_min
+        s = duration % sec_in_min
         return f'{d} дн {h} час {m} мин {s} сек'
     else:
         return 'это слишком мало секунд ))'
 
 
 duration = 400153
+# duration = 8000
 result = convert_time(duration)
 print(result)
