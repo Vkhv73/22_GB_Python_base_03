@@ -7,15 +7,16 @@ def convert_list_in_str(list_in: list) -> str:
 
     str_out = ""
     item: str
+    digit: int
     for item in list_in:
         if item.startswith('+'):
-            digit: int = int(item[1:])
+            digit = int(item[1:])
             str_out += f'"+{digit:02d}" '
         elif item.startswith('-'):
-            digit: int = int(item[1:])
+            digit = int(item[1:])
             str_out += f'"-{digit:02d}" '
         elif item.isdigit():
-            digit: int = int(item)
+            digit = int(item)
             str_out += f'"{int(digit):02d}" '
         else:
             str_out += f'{item} '
