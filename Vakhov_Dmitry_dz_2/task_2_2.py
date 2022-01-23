@@ -39,10 +39,13 @@ def convert_list_in_str(list_in: list) -> str:
             str_out += f'{item}'
         else:
             str_out += f'{item} '
-
+    print(new_list)
+    print(id(new_list))
     return str_out.strip()
 
 
 my_list = ['в', '5', 'часов', '17', 'минут', 'температура', 'воздуха', 'была', '-100', 'градусов']
+print(id(my_list))
 result = convert_list_in_str(my_list)
 print(result)
+print(id(result))
