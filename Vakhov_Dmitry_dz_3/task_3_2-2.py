@@ -12,7 +12,7 @@ NUMBER_DICTIONARY: dict = {
 }
 
 
-def num_translate(value: str) -> str:
+def num_translate_adv(value: str) -> str:
     """Переводит числительное с английского на русский """
     if value.istitle():
         value = value.lower()
@@ -28,10 +28,10 @@ def num_translate(value: str) -> str:
     # return str_out
 
 
-print(num_translate("eleven"))
-print(num_translate("one"))
-print(num_translate("One"))
-print(num_translate("Two"))
-print(num_translate("eight"))
-print(num_translate("Eight"))
-print(num_translate("zero"))
+print(num_translate_adv("eleven"))
+print(num_translate_adv("one"))
+print(num_translate_adv("One"))
+print(num_translate_adv("Two"))
+print(num_translate_adv("eight"))
+print(num_translate_adv("Eight"))
+print(num_translate_adv("zero"))

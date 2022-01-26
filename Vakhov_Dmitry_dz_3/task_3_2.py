@@ -23,7 +23,7 @@ NUMBER_DICTIONARY: dict = {
 }
 
 
-def num_translate(value: str) -> str:
+def num_translate_adv(value: str) -> str:
     """Переводит числительное с английского на русский """
     # реализуйте здесь, где хранить необходимые исходные данные определитесь самостоятельно
     # str_out = NUMBER_DICTIONARY.get(value, 'нет такого в словаре')
@@ -41,12 +41,13 @@ def num_translate(value: str) -> str:
 #     return str_out
 
 
-print(num_translate("eleven"))
-print(num_translate("one"))
-print(num_translate("One"))
-print(num_translate("two"))
-print(num_translate("eight"))
-print(num_translate("zero"))
+print(num_translate_adv("eleven"))
+print(num_translate_adv("one"))
+print(num_translate_adv("One"))
+print(num_translate_adv("two"))
+print(num_translate_adv("eight"))
+print(num_translate_adv("Eight"))
+print(num_translate_adv("zero"))
 
 # print(num_translate_v1("eleven"))
 # print(num_translate_v1("one"))
