@@ -1,4 +1,7 @@
-def thesaurus(*args) -> dict:
+from task_3_3 import thesaurus
+
+
+def thesaurus_adv(*args) -> dict:
     # пишите свою реализацию здесь
     dict_out = {}  # результирующий словарь значений
     for i in args:
@@ -10,9 +13,9 @@ def thesaurus(*args) -> dict:
             dict_out.update({c: [i]})
         else:
             dict_out[c].append(i)
-    # print(type(dict_out))
-    # print(type(dict_out['И']))
     return dict_out
 
 
-print(thesaurus("Иван", "Мария", "Петр", "Илья"))
+print(thesaurus_adv("Иван Сергеев", "Инна Серова", "Петр Алексеев", "Илья Иванов", "Анна Савельева"))
+
+# TODO: Разобраться как сортировать по фамилиям, и как отсортировать по ключу.

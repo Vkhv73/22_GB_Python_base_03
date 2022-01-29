@@ -1,3 +1,5 @@
+from typing import Optional
+
 NUMBER_DICTIONARY: dict = {
     'one': 'один',
     'two': 'два',
@@ -12,15 +14,10 @@ NUMBER_DICTIONARY: dict = {
 }
 
 
-def num_translate(value: str) -> str:
+def num_translate(value: str) -> Optional[str]:
     """Переводит числительное с английского на русский """
     # реализуйте здесь, где хранить необходимые исходные данные определитесь самостоятельно
-    # str_out = NUMBER_DICTIONARY.get(value, 'нет такого в словаре')
-    if value in NUMBER_DICTIONARY.keys():
-        str_out = NUMBER_DICTIONARY.get(value)
-        return str_out
-    else:
-        pass
+    return NUMBER_DICTIONARY.get(value)
 
 
 def num_translate_v1(value: str) -> str:
