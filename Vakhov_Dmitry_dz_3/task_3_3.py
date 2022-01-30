@@ -19,4 +19,4 @@ def thesaurus(*args) -> dict:
 
 
 print(thesaurus("Иван", "Мария", "Петр", "Илья", "Анатолий"))
-print(sorted(thesaurus("Иван", "Мария", "Петр", "Илья", "Анатолий").items()))
+print(dict(sorted(thesaurus("Иван", "Мария", "Петр", "Илья", "Анатолий").items())))
